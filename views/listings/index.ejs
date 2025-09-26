@@ -1,10 +1,13 @@
 <% layout("layouts/boilerplate") %>
         <% if(allListings && allListings.length === 0) { %>
-            <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
-                <h6 class="alert-heading">No listings found!</h6>
-                <p>Try a different search or category.</p>
+            <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert" 
+                style="display:flex; align-items:center; justify-content:space-between;">
+            
+                <span style="margin-right:10px;"> No listings found!</b> Try a different search or category.</span>
+            
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+
         <% } %>
 
         <div id="filters" class="cols-12 cols-md-6 cols-sm-1">
@@ -51,14 +54,7 @@
             <div class="filter" data-category="boats">
                 <div><i class="fa-solid fa-ship"></i></div>
                 <p>Boats</p>
-            </div>
-        
-        <div class="tax-toggle mt-3">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-                <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
-            </div>
-        </div>
+            </div>    
     </div>
 
 
@@ -74,11 +70,8 @@
                 <div class="card-body">
                     <p class="card-text">
                         <b><%=listing.title%> </b> <br>
-                        <% if (listing.price != null) { %>
-                    
+                        <% if (listing.price != null) { %>    
                         &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
-                        
-                        <i class="tax-info">&nbsp; &nbsp; &nbsp; +18% GST</i>
                         <% } else { %>
                         Price not available
                         <% } %>
