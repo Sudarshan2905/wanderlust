@@ -1,5 +1,0 @@
-Z5VBWVlInhh07Psq
-wanderlust_user
-mongodb+srv://wanderlust_user:<db_password>@cluster0.tsjnxaa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-mongodb+srv://wanderlust_user:Z5VBWVlInhh07Psq@cluster0.tsjnxaa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
